@@ -7,7 +7,7 @@
 }
 
 :root {
-    --cor-primaria: black;
+    --cor-primaria: white;
     --fonte-principal: 'Inter', sans-serif;
 }
 
@@ -18,11 +18,11 @@ body {
     background-size: cover;
     background-attachment: fixed;*/
 
-    background: black url(assets/bg-desktop-light.jpg) no-repeat top center/ cover fixed;
+    background: black url(assets/bg-desktop.jpg) no-repeat top center/ cover fixed;
 }
 
 body * {
-    font-family: var(--fonte-principal)
+    font-family: var(--fonte-principal);
     color: var(--cor-primaria);
 }
 
@@ -51,20 +51,26 @@ ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 16px;
+    text-align: center;
     
 }
 
-.ul li{
-    border: 2px solid black;
-    margin: 10px;
-    width: 500px;
-    height: 50px;
-    
+ul li {
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    border-radius: 8px;
+    padding: 20px;
+    background-color:  rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(4px)
 }
 
-{
-    color: var(--cor-primaria);
-    font-size: 16px;
+li a {
     text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 500;
+}
+
+li a:hover {
+    color: rgb(0, 183, 255);
+    text-decoration: underline;
 }
