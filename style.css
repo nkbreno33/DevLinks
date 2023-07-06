@@ -47,6 +47,10 @@ body * {
     margin-top: 8px;
 }
 
+#profile p:hover {
+    color: gold;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -61,16 +65,21 @@ ul li {
     border-radius: 8px;
     padding: 20px;
     background-color:  rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(4px)
+    backdrop-filter: blur(4px);
+    
+    transition: all 0.2s;
 }
 
 li a {
     text-decoration: none;
-    color: var(--cor-primaria);
-    font-weight: 500;
 }
 
-li a:hover {
+li:hover {
+    background-color: rgb(255, 255, 255, 0.05);
+    border: 1px solid white;
+}
+
+li a:active {
     color: rgb(0, 183, 255);
     text-decoration: underline;
 }
