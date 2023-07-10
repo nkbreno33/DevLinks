@@ -9,6 +9,12 @@
 :root {
     --cor-primaria: white;
     --fonte-principal: 'Inter', sans-serif;
+    --bg-url: url(assets/bg-desktop.jpg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(assets/bg-desktop-light.jpg);
 }
 
 body {
@@ -29,6 +35,7 @@ body * {
 #container {
     width: 360px;
     margin: 56px auto 0px;
+    padding: 0 24px;
 }
 
 #profile {
@@ -47,16 +54,14 @@ body * {
     margin-top: 8px;
 }
 
-#profile p:hover {
-    color: gold;
-}
-
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
     text-align: center;
+
+    padding: 24px 0;
     
 }
 
@@ -75,11 +80,49 @@ li a {
 }
 
 li:hover {
-    background-color: rgb(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid white;
 }
 
 li a:active {
     color: rgb(0, 183, 255);
     text-decoration: underline;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    
+    padding: 24px 0;
+
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: all 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.icone-rodape {
+    font-size: 20px;
+}
+
+.icone-rodape:hover {
+    color: skyblue;
+
 }
