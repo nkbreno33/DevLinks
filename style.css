@@ -7,14 +7,25 @@
 }
 
 :root {
-    --cor-primaria: white;
-    --fonte-principal: 'Inter', sans-serif;
+    --text-color: rgba(255, 255, 255, 1);
     --bg-url: url(assets/bg-desktop.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --hightlight-color: rgba(255, 255, 255, 0.2); 
+    --fonte-principal: 'Inter', sans-serif;
+    --switch-bg-url: white url(assets/moon-stars.svg) no-repeat center;
 }
 
 .light {
-    --text-color: black;
+    --text-color: rgba(0, 0, 0, 1);
     --bg-url: url(assets/bg-desktop-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --hightlight-color: rgba(0, 0, 0, 0.1);
+    --fonte-principal: 'Inter', sans-serif;
+    --switch-bg-url: white url(assets/sun.svg) no-repeat center;
 }
 
 body {
@@ -24,12 +35,12 @@ body {
     background-size: cover;
     background-attachment: fixed;*/
 
-    background: black url(assets/bg-desktop.jpg) no-repeat top center/ cover fixed;
+    background: var(--bg-url) no-repeat top center/ cover fixed;
 }
 
 body * {
     font-family: var(--fonte-principal);
-    color: var(--cor-primaria);
+    color: var(--text-color);
 }
 
 #container {
@@ -54,6 +65,31 @@ body * {
     margin-top: 8px;
 }
 
+#switch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 10px;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: var(--switch-bg-url);
+    border: 0;
+    border-radius: 50%;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -66,10 +102,10 @@ ul {
 }
 
 ul li {
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
     padding: 20px;
-    background-color:  rgba(255, 255, 255, 0.10);
+    background-color:  var(--surface-color);
     backdrop-filter: blur(4px);
     
     transition: all 0.2s;
@@ -80,8 +116,8 @@ li a {
 }
 
 li:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid white;
+    background-color: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
 }
 
 li a:active {
@@ -109,7 +145,7 @@ li a:active {
 }
 
 #social-links a:hover {
-    background-color: rgba(255, 255, 255, 0.425);
+    background-color: var(--hightlight-color);
 }
 
 footer {
