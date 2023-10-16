@@ -1,0 +1,47 @@
+@import url("../css/style.css");
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    transition: transform 0.2s;
+}
+
+.project h2, p {
+    color: black;
+    padding: 10px;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project a {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(50, 48, 177);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.2s;
+}
+
+.project a:hover {
+    background-color: rgb(102, 100, 182);
+}

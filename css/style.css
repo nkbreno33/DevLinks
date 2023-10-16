@@ -10,6 +10,7 @@
     --text-color: rgba(255, 255, 255, 1);
     --text-color-menu: rgba(255, 255, 255, 1);
     --background-menu: rgb(50, 48, 177);
+    --text-pj: white;
     --bg-url: url(../assets/fundodark.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
@@ -22,6 +23,7 @@
 .light {
     --text-color: rgba(0, 0, 0, 1);
     --text-color-menu: rgba(255, 255, 255, 1);
+    --text-pj: white;
     --background-menu: black;
     --bg-url: url(../assets/fundolight.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
@@ -44,14 +46,15 @@ body * {
 
 .cabecalho {
     text-align: right;
-    padding: 10px 0;
+    padding: 20px 0;
     background-color: var(--background-menu);
 }
 
 .cabecalho__menu a {
     text-decoration: none;
     color: var(--text-color-menu);
-    padding: 10px;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .cabecalho__menu a:hover {
