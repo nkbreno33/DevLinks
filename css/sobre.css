@@ -1,24 +1,20 @@
-@import 'style.css';
+@import url("../css/style.css");
 
-body {
-    background: url('') no-repeat top center/ cover fixed;
-    margin: 0 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 .container {
-    text-align: center;
-    width: 600px;
-    height: 300px;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--surface-color);
+    background-color: var(--surface-color);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
 }
 
 .container p {
-    padding-top: 30px;
+    padding-top: 3rem;
+    text-indent: 3em;
 }
