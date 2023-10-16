@@ -45,3 +45,14 @@
 .project a:hover {
     background-color: rgb(102, 100, 182);
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project {
+        width: 100%;
+    }
+}

@@ -92,9 +92,7 @@ body * {
 #switch {
     position: relative;
     width: 64px;
-    margin: 26px auto;
-    right: 40%;
-    
+    margin: 26px auto;    
 }
 
 #switch button {
