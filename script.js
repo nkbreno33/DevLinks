@@ -28,3 +28,13 @@ function toggleMode () {
     }
         
 }
+
+
+document.getElementById('download-button').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = './doc/curriculo_nicholas.pdf';
+    link.target = '_blank';
+    link.dowload = 'curriculo_nicholas.pdf';
+    link.click();
+});
+

@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: rgba(255, 255, 255, 1);
+    --text-color-menu: rgba(255, 255, 255, 1);
+    --background-menu: rgb(50, 48, 177);
+    --bg-url: url(../assets/fundodark.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgb(102, 100, 182);
+    --hightlight-color: rgb(50, 48, 177); 
+    --fonte-principal: 'Inter', sans-serif;
+    --switch-bg-url: white url(../assets/moon-stars.svg);
+}
+
+.light {
+    --text-color: rgba(0, 0, 0, 1);
+    --text-color-menu: rgba(255, 255, 255, 1);
+    --background-menu: black;
+    --bg-url: url(../assets/fundolight.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.205);
+    --surface-color-hover: rgb(50, 48, 177);
+    --hightlight-color: rgb(50, 48, 177);
+    --fonte-principal: 'Inter', sans-serif;
+    --switch-bg-url: white url(../assets/sun.svg);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/ cover fixed;
+    height: 90vh;
+}
+
+body * {
+    font-family: var(--fonte-principal);
+    color: var(--text-color);
+}
+
+.cabecalho {
+    text-align: right;
+    padding: 10px 0;
+    background-color: var(--background-menu);
+}
+
+.cabecalho__menu a {
+    text-decoration: none;
+    color: var(--text-color-menu);
+    padding: 10px;
+}
+
+.cabecalho__menu a:hover {
+    background-color: var(--surface-color-hover);
+}
+
+#container {
+    width: 100% ;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+   
+}
+
+#profile h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#profile p {
+    line-height: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 26px auto;
+    right: 40%;
+    
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    animation: slide-back 0.4s;
+}
+
+.light #switch button {
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--hightlight-color)
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.container__habilidades {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container__habilidades h2 {
+    margin: 20px 0;
+}
+
+.container__habilidades img {
+    width: 12%;
+    margin: 20px 0;
+}
+
+.container__botao {
+    text-align: center;
+}
+
+#download-button {
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    padding: 20px 70px;
+    margin: 20px 0;
+    background-color:  var(--surface-color);
+    backdrop-filter: blur(4px);
+    
+    transition: all 0.2s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#download-button:hover {
+    background-color: var(--hightlight-color);
+    border: 1px solid var(--text-color);
+    transform: scale(1.1);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: all 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background-color: var(--hightlight-color);
+}
+
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}

@@ -4,46 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="profile">
-            <img src="assets/avatar.png" alt="Foto de Perfil em darkmode"> 
-            <p>Nicholas Breno</p>
-        </div>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a href="sobre.html" target="_blank">Sobre</a>
+            <a href="">Contato</a>
+        </nav>
+    </header>
+    <main id="container">
         <div id="switch" onclick="toggleMode()">
             <button>
             </button>
             <span></span>
         </div>
-        <ul>
-            <li><a href="doc/curriculo_nicholas.pdf" target="_blank" type="application/pdf">Meu curriculo</a></li>
-            <li><a href="https://www.linkedin.com/in/nicholas-breno/" target="_blank">Acesse meu LinkedIn</a></li>
-            <li><a href="https://github.com/nkbreno33" target="_blank">Veja meu portfólio</a></li>
-        </ul>
-        <div id="social-links">
+        <section id="profile">
+            <img src="assets/avatar.png" alt="Foto de Perfil em darkmode"> 
+            <h1>Nicholas Mourão</h1>
+            <p>Desenvolvedor Front-end, apaixonado por Tecnologia, desenvolvimento e marcas que trabalhem para contribuir com uma melhor interação digital.
+            </p>
+        </section>
+        <section class="container__habilidades">
+            <h2>Habilidades</h2>
+            <img src="assets/html.svg" alt="icone do css">
+            <img src="assets/css.svg" alt="icone do css">
+            <img src="assets/javascript.svg" alt="icone do css">
+            <img src="assets/react.svg" alt="icone do css">
+            <img src="assets/git.svg" alt="icone do css">
+            <img src="assets/nodejs.svg" alt="icone do css">
+        </section>
+            
+        <section class="container__botao"><button id="download-button">Meu curriculo</button></section>
+        
+        <section id="social-links">
             <a href="https://github.com/nkbreno33" target="_blank">
                 <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://instagram.com/nkbreno" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
             </a>
             <a href="https://linkedin.com/in/nicholas-breno" target="_blank">
                 <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5511978040900" target="_blank">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-        </div>
-
-        <footer>
-            <p>Feito pela Rocketseat <ion-icon name="checkmark-circle-outline" class="icone-rodape"></ion-icon></p>
-        </footer>
-
+        </section>
+        
         <script type = "module" src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
         <script nomodule src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="script.js"></script>
-    </div>    
+    </main>   
 </body>
 </html>
