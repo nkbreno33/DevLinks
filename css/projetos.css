@@ -7,12 +7,14 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 15px;
     justify-content: space-around;
 }
 
 .project {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
